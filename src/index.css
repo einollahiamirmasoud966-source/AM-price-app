@@ -1,0 +1,66 @@
+@import "tailwindcss";
+@import "flag-icons/css/flag-icons.min.css";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-fa: "Vazirmatn", "Plus Jakarta Sans", system-ui, sans-serif;
+    --font-en: "Plus Jakarta Sans", "Vazirmatn", system-ui, sans-serif;
+    --font-mono-num: "JetBrains Mono", "Vazirmatn", monospace;
+  }
+
+  html[lang="fa"] body {
+    font-family: var(--font-fa);
+  }
+
+  html[lang="en"] body {
+    font-family: var(--font-en);
+  }
+}
+
+.tabular-nums-data {
+  font-variant-numeric: tabular-nums;
+  font-family: var(--font-mono-num);
+}
+
+html[lang="fa"] .tabular-nums-fa {
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes coin-glint {
+  0%, 100% {
+    transform: translateX(-120%) skewX(-20deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.65;
+  }
+  50% {
+    transform: translateX(140%) skewX(-20deg);
+    opacity: 0;
+  }
+}
+
+@keyframes coin-float {
+  0%, 100% {
+    transform: translateY(0px) rotateY(0deg);
+  }
+  50% {
+    transform: translateY(-2px) rotateY(14deg);
+  }
+}
+
+.animate-coin-glint {
+  animation: coin-glint 3.2s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+.animate-coin-float {
+  animation: coin-float 4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-coin-glint,
+  .animate-coin-float {
+    animation: none;
+  }
+}

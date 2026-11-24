@@ -1,0 +1,6 @@
+{
+  "name": "Gheimat Alan — قیمت الان",
+  "description": "Live gold, coin, currency & cryptocurrency prices in Toman from TGJU with interactive charts, calculator, and home screen widgets.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
